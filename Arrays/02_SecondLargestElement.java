@@ -16,9 +16,19 @@ class Solution {
         // Sort the array to easily find the second largest elements
         Arrays.sort(arr);
         // Second largest element is at index n-2 after sorting
-        int large = arr[n - 2];
+        int large = arr[n - 1];
+        for(int i = n - 2; i >= 0;i--){
+            if(arr[i] != large){
+                large = arr[i];
+                break;
+            }
+        }
         // Output the second largest element
+        if(large == arr[n - 1]){
+          System.out.println("No second largest element");
+        }else{
         System.out.println("Second largest is " + large);
+        }
     }
 }
 
@@ -61,7 +71,11 @@ class Solution {
             }
         }
         // Output the second largest element
-        System.out.println("Second largest is " + second_large);
+        if(second_large == Integer.MIN_VALUE){
+            System.out.println("No second largest element");
+        else{
+            System.out.println("Second largest is " + second_large);
+        }
     }
 }
 
@@ -101,6 +115,9 @@ class Solution {
                 second_large = arr[i];
             }
         }
+        if(second_large == Integer.MIN_VALUE){
+            return -1;
+        }
         return second_large; // Return the second largest element
     }
 }
@@ -114,6 +131,10 @@ public class Main {
         // Find the second largest element
         int sL = Solution.secondLargest(arr, n);
         // Output the result
+        if(sL == -1){
+            System.out.println("No second largest element");
+        }else{
         System.out.println("Second largest is " + sL);
+        }
     }
 }
