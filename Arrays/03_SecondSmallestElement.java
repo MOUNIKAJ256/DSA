@@ -16,15 +16,15 @@ class Solution {
         // Sort the array to easily find the second smallest element
         Arrays.sort(arr);
         // Second smallest element is at index 1 after sorting
-        int small = -1;
+        int small = arr[0];
         for(int i = 1; i < n;i++){
-            if(arr[i] != arr[i - 1]){
+            if(arr[i] != small){
                 small = arr[i];
                 break;
             }
         }
-        // Output the second largest element
-        if(small == -1){
+        // Output the second smallest element
+        if(small == arr[0]){
           System.out.println("No second smallest element");
         }else{
         System.out.println("Second smallest is " + small);
