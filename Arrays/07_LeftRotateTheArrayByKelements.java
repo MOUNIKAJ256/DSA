@@ -27,8 +27,8 @@ class Solution {
         Solution sol = new Solution();
         int[] arr = {1, 2, 3, 4, 5, 6, 7};
         int k = 2;
-        sol.rotateRight(arr, k);
-        System.out.println("Array after right rotation: " + Arrays.toString(arr));
+        sol.rotateLeft(arr, k);
+        System.out.println("Array after left rotation: " + Arrays.toString(arr));
     }
 }
 
