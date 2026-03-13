@@ -4,6 +4,7 @@
 // Time Complexity : O(n)
 // Space Complexity : O(n)
 
+import java.util.*;
 // Class containing the solve method
 class Solution {
     // Function to solve and shift array elements right by one position
@@ -42,6 +43,7 @@ public class Main {
 // Time Complexity : O(n)
 // Space Complexity : O(1)
 
+import java.util.*;
 class Solution {
     public void rotateArrayByOne(int[] nums) {
         int n = nums.length;
